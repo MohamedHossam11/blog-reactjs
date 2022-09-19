@@ -1,0 +1,13 @@
+.create-post-container {
+  padding: 20px 100px;
+  .post-button {
+    display: flex;
+    justify-content: flex-end;
+    .ant-btn {
+      background-color: coral;
+      color: white;
+      margin-top: 20px;
+      width: 100px;
+    }
+  }
+}

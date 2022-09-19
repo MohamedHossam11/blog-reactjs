@@ -1,0 +1,16 @@
+.card-container {
+  .ant-card {
+    margin-bottom: 20px;
+    .ant-card-body {
+      .created-at {
+        display: flex;
+        justify-content: flex-end;
+        color: gray;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  }
+}

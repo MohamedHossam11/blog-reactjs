@@ -1,0 +1,16 @@
+.header-container {
+  .ant-menu {
+    margin-top: 10px;
+  }
+  .ant-layout-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .logo {
+      margin-top: 10px;
+      width: 80px;
+      height: 40px;
+      object-fit: contain;
+    }
+  }
+}

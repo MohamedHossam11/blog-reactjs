@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { ConfigProvider } from 'antd';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import store from './redux/store';
+import { history } from './router';
+import Router from './router';
+import './index.scss';
 
-export default App;
+const Root = () => (
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <ConfigProvider >
+        <Router />
+      </ConfigProvider>
+    </ConnectedRouter>
+  </Provider>
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Root />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+export default Root;

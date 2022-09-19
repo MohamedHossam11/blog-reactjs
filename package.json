@@ -3,19 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^4.23.2",
+    "axios": "^0.27.2",
+    "connected-react-router": "^6.9.3",
+    "less": "^3.12.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.54.9",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-theme": "lessc --js ./src/custom-theme.less ./src/antd-custom-theme.css"
   },
   "eslintConfig": {
     "extends": [
