@@ -1,7 +1,7 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import User from '../../redux/user';
 import './index.scss';
 
@@ -14,7 +14,7 @@ const Login = () => {
       if (res.payload.data.statusCode === 452) {
         setError('Wrong Credentials');
       } else {
-        history.push('/home');
+        history.push('/');
       }
     });
   };
@@ -54,6 +54,11 @@ const Login = () => {
           <Button type='primary' htmlType='submit'>
             Submit
           </Button>
+        </Form.Item>
+        <Form.Item>
+          <Link onClick={() => history.push('/signUp')} className='link'>
+            Don't have an account? Try Signing Up
+          </Link>
         </Form.Item>
       </Form>
     </div>

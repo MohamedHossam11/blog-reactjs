@@ -11,7 +11,7 @@ const Guest = () => {
   return (
     <DefaultLayout>
       <Switch>
-        <PrivateRoute path='/home' exact component={HomePage} />
+        <PrivateRoute path='/' exact component={HomePage} />
         <Route path='/login' exact component={Login} />
         <Route path='/signUp' exact component={SignUp} />
         <Route component={NotFound} exact />

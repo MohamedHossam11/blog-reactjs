@@ -21,10 +21,7 @@ const Navbar = () => {
   return (
     <div className='header-container'>
       <Header>
-        <img
-          src='https://l1r1.ai/wp-content/uploads/2022/06/l1r1_Logo_2022_dark_bg.png'
-          className='logo'
-        />
+        <img src='/blogicon.png' className='logo' />
         <Menu theme='dark' mode='vertical' items={items} />
       </Header>
     </div>

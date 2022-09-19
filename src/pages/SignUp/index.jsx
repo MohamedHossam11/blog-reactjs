@@ -10,6 +10,7 @@ const SignUp = () => {
   const history = useHistory();
   const [error, setError] = useState('');
   const onFinish = (values) => {
+    console.log('here');
     dispatch(User.thunks.signUp(values)).then((res) => {
       if (res.payload.data.statusCode === 200) {
         history.push('/login');
